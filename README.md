@@ -5,7 +5,6 @@
 **Year:** 4th
 
 ## Project Details:
-**Description:** I have developed a Amazon landing page clone.
 **Tech Stack:** Flutter
 **Figma Link:** (Figma UI Link)[/add your link here, the link should be clickable]
 **GitHub Repo Link:** (Project Repo)https://github.com/kurveyash6174/practice_project_1
