@@ -1,16 +1,11 @@
-# practice_project_1
+# Dart Flutter Chowk Task - 1
+## Details:
+**Name:** Yash Kurve
+**College:** PCE
+**Year:** 4th
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Details:
+**Description:** I have developed a Amazon landing page clone.
+**Tech Stack:** Flutter
+**Figma Link:** (Figma UI Link)[/add your link here, the link should be clickable]
+**GitHub Repo Link:** (Project Repo)https://github.com/kurveyash6174/practice_project_1
