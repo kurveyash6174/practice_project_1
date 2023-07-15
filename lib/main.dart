@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neopop/widgets/buttons/neopop_tilted_button/neopop_tilted_button.dart';
 import 'package:practice_project_1/first_screen.dart';
 import 'package:practice_project_1/second_screen.dart';
 
@@ -32,7 +33,7 @@ class ExpandedExample extends StatelessWidget {
     return Center(
       child: Column(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -41,42 +42,83 @@ class ExpandedExample extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(width: 4, color: Colors.grey.shade200),
                 shape: BoxShape.circle,
-                image: DecorationImage(
+                image: const DecorationImage(
                     image: NetworkImage(
                         'https://media.licdn.com/dms/image/D4D03AQEFAkEJ56Bzlg/profile-displayphoto-shrink_800_800/0/1668710234384?e=2147483647&v=beta&t=50qsokisEej8cpHeEX3tb5Adr3uCO6NjAnm26hHeKhc'))),
           ),
-          Text(
+          const Text(
             'Yash Kurve',
             style: TextStyle(fontSize: 24, height: 2),
           ),
           Expanded(
             child: Center(
               child: Container(
-                child: Text( 'This Container is expanded to the Profile & Button'),
                 color: Colors.grey[100],
+                child: const Text( 'This Container is expanded to the Profile & Button'),
               ),
             ),
           ),
-          MaterialButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ListViewBuilderRow()));
+          NeoPopTiltedButton(
+            isFloating: true,
+            onTapUp: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ListViewBuilderRow()));
             },
-            color: Colors.greenAccent,
-            child: Text('Row'),
+            decoration: const NeoPopTiltedButtonDecoration(
+              color: Colors.lightGreen,
+              plunkColor: Colors.lightGreen,
+              shadowColor: Color.fromRGBO(36, 36, 36, 1),
+              showShimmer: true,
+            ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 70.0,
+                vertical: 15,
+              ),
+              child: Text('Row'),
+            ),
           ),
-          MaterialButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ListViewBuilderColumn()));
+          NeoPopTiltedButton(
+            isFloating: true,
+            onTapUp: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ListViewBuilderColumn()));
             },
-            color: Colors.greenAccent,
-            child: Text('Coloumn'),
+            decoration: const NeoPopTiltedButtonDecoration(
+              color: Color.fromRGBO(255, 235, 52, 1),
+              plunkColor: Color.fromRGBO(255, 235, 52, 1),
+              shadowColor: Color.fromRGBO(36, 36, 36, 1),
+              showShimmer: true,
+            ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 70.0,
+                vertical: 15,
+              ),
+              child: Text('Column'),
+            ),
           ),
+          SizedBox(
+            height: 10,
+          )
+          // MaterialButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //             builder: (context) => const ListViewBuilderRow()));
+          //   },
+          //   color: Colors.greenAccent,
+          //   child: const Text('Row'),
+          // ),
+          // MaterialButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //             builder: (context) => const ListViewBuilderColumn()));
+          //   },
+          //   color: Colors.greenAccent,
+          //   child: const Text('Coloumn'),
+          // ),
         ],
       ),
     );
